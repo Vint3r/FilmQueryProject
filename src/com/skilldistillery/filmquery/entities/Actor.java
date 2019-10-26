@@ -45,8 +45,8 @@ public class Actor {
 		return films;
 	}
 
-	public void setFilms(Film film) {
-		this.films.add(film);
+	public void setFilms(List<Film> films) {
+		this.films = films;
 	}
 
 	@Override
