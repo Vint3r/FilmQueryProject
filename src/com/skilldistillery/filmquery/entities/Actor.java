@@ -10,6 +10,12 @@ public class Actor {
 
 	public Actor() {
 	};
+	
+	public Actor(Integer actorID, String firstName, String lastName) {
+		this.actorID = actorID;
+		this.firstName = firstName;
+		this.lastName = lastName;
+	}
 
 	public Integer getActorID() {
 		return actorID;
@@ -39,8 +45,8 @@ public class Actor {
 		return films;
 	}
 
-	public void setFilms(List<Film> films) {
-		this.films = films;
+	public void setFilms(Film film) {
+		this.films.add(film);
 	}
 
 	@Override
@@ -95,9 +101,6 @@ public class Actor {
 		builder.append(firstName);
 		builder.append(", lastName=");
 		builder.append(lastName);
-		builder.append(", films=");
-		builder.append(films);
-		builder.append("]");
 		return builder.toString();
 	}
 
