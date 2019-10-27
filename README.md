@@ -1,5 +1,5 @@
 # Film Query Data Base
-===
+---
 A weekend project I completed for Skill Distillery, a Java coding bootcamp.
 
 ### Overview
@@ -20,4 +20,4 @@ Most of the user interface is made up of a different method for each menu system
 
 ### Lessons Learned
 ---
-The biggest hurdle for me in this project was getting my sql commands to work correctly, or at least grab the information I was looking for. I especially had issues when it came to more complicated commands like the command I wrote for finding a film by actor id. It was supposed to find all information for a film, find the languages available for the movies, along with still finding all the info for the searched for actor. Other than that really the next biggest problem I had was just running into issues having too many connections open to the data base which would crash the program. I found the issue was I was trying to set up all my connections in a external method that would then pass the connection off to the method that needed it. I did this to try and save myself some time to avoid rewriting code over and over, but unfortunately it would not fully close the connection like normal when using the .close call. 
+The biggest hurdle for me in this project was getting my sql commands to work correctly, or at least grab the information I was looking for. I especially had issues when it came to more complicated commands like the command I wrote for finding a film by actor id. It was supposed to find all information for a film, find the languages available for the movies, along with still finding all the info for the searched for actor. Other than that really the next biggest problem I had was just running into issues having too many connections open to the data base which would crash the program. I found the issue was I was trying to set up all my connections in a external method that would then pass the connection off to the method that needed it. I did this to try and save myself some time to avoid rewriting code over and over, but unfortunately it would not fully close the connection like normal when using the .close call.
