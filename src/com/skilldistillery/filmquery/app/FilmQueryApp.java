@@ -20,16 +20,6 @@ public class FilmQueryApp {
 		app.launch();
 	}
 
-//	private void test() throws SQLException {
-//		Film film = db.findFilmById(1);
-//		if (film == null) {
-//			System.out.println("is null");
-//		}
-//		System.out.println(film);
-//		for (Actor actor : film.getActors()) {
-//			System.out.println(actor);
-//		}
-//	}
 
 	private void launch() {
 		Scanner input = new Scanner(System.in);

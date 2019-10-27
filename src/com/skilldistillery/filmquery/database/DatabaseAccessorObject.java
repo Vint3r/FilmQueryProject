@@ -172,6 +172,7 @@ public class DatabaseAccessorObject implements DatabaseAccessor {
 			filmWanted.setReplaceCost(rs.getDouble("replacement_cost"));
 			filmWanted.setRating(rs.getString("rating"));
 			filmWanted.setSpecialFeat(rs.getString("special_features"));
+			filmWanted.setActors(findActorsByFilmId(rs.getInt("id")));
 			films.add(filmWanted);
 			filmWanted = null;
 		}
