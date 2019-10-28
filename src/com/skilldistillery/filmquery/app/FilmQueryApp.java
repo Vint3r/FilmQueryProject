@@ -252,7 +252,11 @@ public class FilmQueryApp {
 				for (Film userFilm : userFilms) {
 					boolean stay = true;
 					inner: while (stay) {
-						System.out.println("The movie information for the search term: " + key + " is as follows: ");
+						if (key == null) {
+							System.out.println("The movie information is as follows: ");
+						} else {
+							System.out.println("The movie information for the search term: " + key + " is as follows: ");
+						}
 						System.out.println("Title: " + userFilm.getTitle());
 						System.out.println("Rating: " + userFilm.getRating());
 						System.out.println("Release Year: " + userFilm.getReleaseYear());
