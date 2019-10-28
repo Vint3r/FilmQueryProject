@@ -60,10 +60,11 @@ public class DatabaseAccessorObject implements DatabaseAccessor {
 		Connection conn = DriverManager.getConnection(URL, user, password);
 
 		List<Film> filmsWanted = new ArrayList<>();
-		String sqlComm = "select film.*, language.name from film join language on film.language_id = language.id where title like \"%"
-				+ key + "%\" or description like \"%" + key + "%\"";
+		String sqlComm = "select film.*, language.name from film join language on film.language_id = language.id where title like ? or description like ?";
 
 		PreparedStatement ps = conn.prepareStatement(sqlComm);
+		ps.setString(1, "%" + key + "%");
+		ps.setString(2, "%" + key + "%");
 		ResultSet rs = ps.executeQuery();
 		while (rs.next()) {
 			Film filmWanted = new Film();
